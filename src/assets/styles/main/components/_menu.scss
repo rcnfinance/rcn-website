@@ -1,0 +1,93 @@
+.menu {
+  @extend .flex, .justify-between, .align-center;
+  padding: 15px 38px;
+  .menu__item--brand{
+      width: 110px;
+      height: 40px;
+  }
+  #menu{
+      cursor: pointer;
+      filter: brightness(0);
+  }
+  &--dropdown {
+    @extend .flex, .flex-column, .justify-between, .align-start;
+    padding: 20px 50px 60px 38px;
+    background-color: $color-primary;
+    width: 100%;
+    max-width: 556px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    .menu__item {
+      &--links {
+        @extend .flex, .flex-column;
+        width: 100%;
+        overflow: hidden;
+        font: 700 normal 45px/54px sans-serif;
+        a {
+          text-decoration: none;
+          color: white;
+          margin-bottom: 20px;
+          position: relative;
+          @extend .flex, .align-center;
+          &:hover {
+            transition: all 300ms;
+            transform: translateX(40px);
+            color: black;
+          }
+          &:hover::before {
+            transition: all 300ms;
+            transform: translateX(-40px);
+          }
+          &::before {
+            background-image: url("../images/arrow-right-solid.svg");
+            background-repeat: no-repeat;
+            content: "";
+            width: 30px;
+            height: 30px;
+            transform: translateX(-30px);
+            @extend .absolute;
+          }
+        }
+      }
+      span {
+        &.nav-icon {
+          cursor: pointer;
+          text-align: right;
+          align-self: flex-end;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      &:first-child {
+        align-self: flex-end;
+      }
+      &--contact{
+          width: 100%;
+          @extend .flex, .align-center, .justify-between;
+          h3{
+            font: 900 normal 45px/54px sans-serif;
+          }
+          hr{
+              width: 100%;
+              max-width: 180px;
+              height: 1px;
+              border: none;
+              background-color: black;
+              margin: 0;
+          }
+      }
+    }
+    z-index: 999999;
+    right: -100vw;
+    transition: all 600ms;
+    &.--open {
+      right: 0;
+    }
+    &.--close {
+      right: -100vw;
+    }
+  }
+}

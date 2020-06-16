@@ -1,4 +1,4 @@
-// Breakpoints
+//Breakpoints
 @mixin breakpoint($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
@@ -9,6 +9,7 @@
     + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
 
 // Function to get col percent
 @function get-col-percent($column-num) {

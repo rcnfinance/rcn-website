@@ -1,0 +1,28 @@
+.hero{
+    // background-color: pink;
+    &__content{
+        margin-top: 60px;
+        &--left{
+            h1{
+                font: 900 normal 125px/100px sans-serif;
+                color: $color-primary;
+                margin-bottom: 40px;
+                letter-spacing: -6.25px;
+            }
+            h2{
+                font: 300 normal 30px/29px sans-serif;
+                text-transform: uppercase;
+                color: $color-primary;
+                margin-bottom: 30px;
+            }
+            p.--lead{
+                margin-bottom: 50px;
+            }
+        }
+        &--right{
+            text-align: right;
+            // background-color: white;
+            @extend .flex, .align-end;
+        }
+    }
+}
