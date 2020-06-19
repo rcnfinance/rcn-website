@@ -1,28 +1,29 @@
 .hero{
-    // background-color: pink;
     &__content{
-        margin-top: 60px;
+        margin-top: 80px;
+        height: 100vh;
         &--left{
             h1{
-                font: 900 normal 125px/100px sans-serif;
+                font: 900 normal 125px/100px $font;
                 color: $color-primary;
-                margin-bottom: 40px;
+                margin-bottom: 35px;
                 letter-spacing: -6.25px;
             }
             h2{
-                font: 300 normal 30px/29px sans-serif;
+                font: 300 normal 30px/29px $font;
                 text-transform: uppercase;
                 color: $color-primary;
                 margin-bottom: 30px;
             }
             p.--lead{
-                margin-bottom: 50px;
+                font: 300 normal 20px/27px $font;
+                color: $grey;
+                margin-bottom: 60px;
             }
         }
         &--right{
             text-align: right;
-            // background-color: white;
-            @extend .flex, .align-end;
+            @extend .flex, .align-center;
         }
     }
 }
