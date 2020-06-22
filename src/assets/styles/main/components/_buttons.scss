@@ -19,8 +19,7 @@
   }
 
   .scroll-down{
-      @extend .absolute;
-      @extend .flex, .flex-column, .justify-center, .align-center;
+      @extend .flex, .flex-column, .justify-center, .align-center, .absolute;
       left: 50%;
       bottom: 3vh;
       cursor: pointer;

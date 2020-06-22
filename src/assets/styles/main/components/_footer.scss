@@ -1,0 +1,26 @@
+.footer{
+    @extend .flex, .justify-center, .align-center;
+    background-color: $black;
+    padding: 16px 0px;
+    font: 300 normal 16px/20px $font;
+    &__item{
+        .--link{
+            color: $white;
+            padding: 0px 20px;
+            border-right: 1px solid $white;
+        }
+    }
+    &__socials{
+        @extend .flex, .justify-center, .align-center;
+        .--icon{
+            width: 18px;
+            margin-left: 20px;
+        }
+    }
+    &__copy{
+        margin-left: 30px;
+        a{
+            color: $white;
+        }
+    }
+}
