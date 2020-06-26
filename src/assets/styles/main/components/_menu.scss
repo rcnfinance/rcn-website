@@ -12,17 +12,17 @@
     text-decoration: none;
     font-size: 21px;
     font-weight: 600;
-    &--revert{
-        color: white;
+    &--revert {
+      color: white;
     }
   }
-  .icon{
-      width: 30px;
-      margin-right: 7px;
+  .icon {
+    width: 30px;
+    margin-right: 7px;
   }
-  #menu{
-      cursor: pointer;
-      filter: brightness(0);
+  #menu {
+    cursor: pointer;
+    filter: brightness(0);
   }
   &--dropdown {
     @extend .flex, .flex-column, .justify-between, .align-start;
@@ -47,12 +47,12 @@
           position: relative;
           @extend .flex, .align-center;
           &:hover {
-            transition: all 300ms;
+            transition: all 1.2s;
             transform: translateX(40px);
             color: black;
           }
           &:hover::before {
-            transition: all 300ms;
+            transition: all 1.2s;
             transform: translateX(-40px);
           }
           &::before {
@@ -80,20 +80,20 @@
       &:first-child {
         align-self: flex-end;
       }
-      &--contact{
+      &--contact {
+        width: 100%;
+        @extend .flex, .align-center, .justify-between;
+        h3 {
+          font: 900 normal 45px/54px sans-serif;
+        }
+        hr {
           width: 100%;
-          @extend .flex, .align-center, .justify-between;
-          h3{
-            font: 900 normal 45px/54px sans-serif;
-          }
-          hr{
-              width: 100%;
-              max-width: 180px;
-              height: 1px;
-              border: none;
-              background-color: black;
-              margin: 0;
-          }
+          max-width: 180px;
+          height: 1px;
+          border: none;
+          background-color: black;
+          margin: 0;
+        }
       }
     }
     z-index: 999999;
@@ -109,9 +109,9 @@
 }
 
 .--active {
-    background-color: rgba(0, 0, 0, 0.9);
-    opacity: 10;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 10;
 }
-.--revert{
-    filter: brightness(9) !important;
+.--revert {
+  filter: brightness(9) !important;
 }

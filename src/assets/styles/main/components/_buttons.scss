@@ -51,3 +51,40 @@
       }
   }
   
+  .slick-prev{
+    background-image: url("../images/arrow-circle-left.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    font-size: 0;
+    z-index: 1;
+    &:focus{
+      outline: 0;
+      opacity: 0.7;
+    }
+  }
+  .slick-next{
+    background-image: url("../images/arrow-circle-right.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 0;
+    bottom: 0;
+    right: 200px;
+    &:focus{
+      outline: 0;
+      opacity: 0.7;
+    }
+  }
