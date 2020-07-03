@@ -1,11 +1,11 @@
 .button {
-    @extend .dib;
     font: 600 normal 12px/15px $font;
     letter-spacing: 1.2px;
     text-decoration: none;
     border-radius: 3px;
     padding: 18px 30px;
     text-transform: uppercase;
+    text-align: center;
     &--primary {
       border: 1px solid $color-primary;
       color: $color-primary;
@@ -21,10 +21,13 @@
   .scroll-down{
       @extend .flex, .flex-column, .justify-center, .align-center, .absolute;
       left: 50%;
-      bottom: 3vh;
+      bottom: -70px;
       cursor: pointer;
       box-sizing: border-box;
       z-index: 2;
+      @include breakpoint(sm){
+        bottom: -100px;
+      }
       &--item{
           background-color: white;
           border:2px solid $color-primary;
@@ -34,10 +37,18 @@
           &:first-child{
             width: 7px;
             height: 7px;
+            display: none;
+            @include breakpoint(sm){
+              display: block;
+            }
           }
           &:nth-child(2){
             width: 9px;
             height: 9px;
+            display: none;
+            @include breakpoint(sm){
+              display: block;
+            }
           }
           &:last-child{
             width: 25px;
@@ -50,6 +61,7 @@
           }
       }
   }
+
   
   .slick-prev{
     background-image: url("../images/arrow-circle-left.svg");
@@ -59,11 +71,15 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     bottom: 0;
     font-size: 0;
     z-index: 1;
+    left: 30px;
+    @include breakpoint(sm){
+      left: 0px;
+    }
     &:focus{
       outline: 0;
       opacity: 0.7;
@@ -76,13 +92,16 @@
     position: absolute;
     background-color: transparent;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     position: absolute;
     cursor: pointer;
     font-size: 0;
     bottom: 0;
-    right: 200px;
+    right: 30px;
+    @include breakpoint(sm){
+      right: 200px;
+    }
     &:focus{
       outline: 0;
       opacity: 0.7;

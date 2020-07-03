@@ -8,6 +8,20 @@
   padding: 0 rem(10);
 
   @include breakpoint(sm) {
-    padding: 0 rem(20);
+    padding: 0 20px;
+  }
+}
+
+
+.white__space{
+  height: 160px;
+  @include breakpoint(sm) {
+    height: 300px;
+  }
+  &--module{
+      height: 100px;
+      @include breakpoint(sm) {
+        height: 50px;
+      }
   }
 }

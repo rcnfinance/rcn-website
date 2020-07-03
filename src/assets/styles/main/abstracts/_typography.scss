@@ -3,30 +3,12 @@ $system-fonts: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
 
 $font: 'proxima-nova', sans-serif;
 
+
+body{
+    font-family: $font;
+}
+
 // Typography Weight
 $f-regular: 400;
 $f-bold: 700;
 $f-ebold: 900;
-
-
-// Typography sizes
-
-
-.title-sm{
-    font: 800 normal 16px/20px $font;
-}
-.title-md{
-    font: 800 normal 45px/54px $font;
-    letter-spacing: -2.25px;
-}
-.title-lg{
-    font: 800 normal 125px/100px $font;
-}
-
-.title-xl{
-    font: 800 normal 16px/20px $font;
-}
-
-.lead{
-    font: 300 normal 20px/27px $font;
-}

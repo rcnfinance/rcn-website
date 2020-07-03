@@ -1,5 +1,5 @@
 .menu {
-  background-color: white;
+  background-color: $white;
   @extend .flex, .justify-between, .align-center;
   padding: 10px 38px;
   position: sticky;
@@ -71,10 +71,7 @@
           cursor: pointer;
           text-align: right;
           align-self: flex-end;
-          img {
-            width: 25px;
-            height: 25px;
-          }
+          font-size: 21px;
         }
       }
       &:first-child {
@@ -97,13 +94,13 @@
       }
     }
     z-index: 999999;
-    right: -100vw;
+    right: -100%;
     transition: all 600ms;
     &.--open {
       right: 0;
     }
     &.--close {
-      right: -100vw;
+      right: -100%;
     }
   }
 }

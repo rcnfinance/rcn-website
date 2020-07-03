@@ -1,20 +1,18 @@
 const tabs = () => {
-  const btn = document.querySelectorAll(".network__tab--nav button");
+  const btn = document.querySelectorAll('.network__tab--nav button');
   const tabContent = document.querySelectorAll(
-    ".network__tab--content .tabcontent"
+    '.network__tab--content .tabcontent'
   );
 
-  for (let el of btn) {
-    el.addEventListener("click", (e) => {
-      let selectBtn = e.target.dataset.tabname;
+  for (const el of btn) {
+    el.addEventListener('click', (e) => {
+      const selectBtn = e.target.dataset.tabname;
       if (selectBtn) {
-        for (let tag of tabContent) {
-          selectBtn === tag.id ? tag.classList.add("--show") : tag.classList.remove("--show");
+        for (const tag of tabContent) {
+          selectBtn === tag.id ? tag.classList.add('--show') : tag.classList.remove('--show');
         }
       }
-
-    });
+    })
   }
-};
-
-export default tabs;
+}
+export default tabs
