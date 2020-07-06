@@ -9,7 +9,7 @@
     &--nav {
       @extend .flex, .justify-center;
       margin: 20px 0px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin: 30px 0px;
       }
       .tablinks {
@@ -20,7 +20,7 @@
         color: $ligth-grey;
         cursor: pointer;
         font: 800 normal 14px/17px $font;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           font-size: 16px;
           line-height: 24px;
         }
@@ -54,7 +54,7 @@
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 40px;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           font: 300 normal 30px/40px $font;
         }
         strong {
@@ -72,7 +72,7 @@
     }
     .lead {
       color: $grey;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-bottom: 30px;
       }
     }
@@ -108,7 +108,7 @@
   margin-top: 100px;
   &__content {
     @extend .flex, .flex-column, .justify-start;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       flex-direction: row;
     }
     &--left {
@@ -129,26 +129,26 @@
         margin-bottom: 40px;
         color: $grey;
       }
-      @include breakpoint(md){
+      @include breakpoint(md) {
         padding: 0;
       }
     }
   }
-  &__mask{
+  &__mask {
     color: $color-primary;
     position: absolute;
     top: -110px;
     z-index: 0;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       top: -200px;
       left: 120px;
     }
-    span{
+    span {
       color: $color-primary;
       opacity: 0.08;
       font: 800 normal 144px/108px $font;
       letter-spacing: -16.15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         font-size: 323px;
         line-height: 240px;
       }
@@ -161,7 +161,7 @@
   background-image: url("../images/bg_news-events.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     padding: 200px 0px;
   }
   &__title {
@@ -220,7 +220,7 @@
         margin-bottom: 10px;
       }
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-left: 180px;
     }
   }
@@ -239,7 +239,7 @@
   &__title {
     text-align: center;
     margin-bottom: 60px;
-    .lead{
+    .lead {
       color: $grey;
       width: 100%;
       max-width: 840px;
@@ -263,7 +263,7 @@
   &__carousel {
     position: relative;
     overflow: hidden;
-    .card__title{
+    .card__title {
       color: $color-primary;
     }
     &:before {
@@ -278,7 +278,7 @@
       right: 0;
       z-index: 1;
       display: none;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         display: block;
       }
     }
@@ -306,7 +306,7 @@
     .active {
       display: block;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       text-align: left;
       margin-left: 250px;
       max-width: 400px;
@@ -332,9 +332,9 @@
   .slick-prev {
     display: none !important;
   }
-  .slick-slide { 
+  .slick-slide {
     padding: 20px 10px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-right: 40px;
     }
     &:first-child {
@@ -343,11 +343,11 @@
   }
 }
 
-.properties{
-  .row{
-     @extend .flex, .flex-column, .justify-center, .align-center;
+.properties {
+  .row {
+    @extend .flex, .flex-column, .justify-center, .align-center;
   }
-  &__content{
+  &__content {
     text-align: center;
     width: 100%;
     max-width: 840px;
@@ -355,38 +355,48 @@
   }
 }
 
-.get-started{
+.get-started {
   @extend .flex, .flex-column, .justify-center, .align-center, .relative;
   padding: 110px 0px;
-  background-color: #4155FF;
+  background-color: #4155ff;
   border-top-left-radius: 80% 7%;
   border-top-right-radius: 0% 20%;
   overflow: hidden;
   padding-left: -20px;
   padding-right: -20px;
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     border-top-left-radius: 50% 10%;
     border-top-right-radius: 50% 20%;
   }
-  &__content{
+  &__content {
     color: $white;
     width: 100%;
     max-width: 628px;
     z-index: 2;
+    h3 {
+      font: 800 normal 70px/85px $font;
+    }
+    .link {
+      color: $white;
+      font-size: 20px;
+      font-weight: 500;
+      display: block;
+      margin-top: 60px;
+    }
   }
-  &__list{
+  &__list {
     @extend .flex, .justify-around, .flex-column, .align-center;
     margin-top: 40px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       flex-direction: row;
       padding-left: 110px;
     }
-    .card{
+    .card {
       @extend .relative;
       color: $white;
       width: 100%;
       max-width: 240px;
-      span{
+      span {
         position: absolute;
         font-size: 113px;
         line-height: 133px;
@@ -395,47 +405,107 @@
         left: -50px;
         z-index: 0;
       }
-      &--icon{
+      &--icon {
         width: 80px;
         margin-bottom: 20px;
       }
-      h3{
+      h3 {
         text-transform: uppercase;
-        font: 600 normal 16px/20px "proxima-nova", sans-serif;
+        font: 800 normal 16px/20px "proxima-nova", sans-serif;
         margin-bottom: 10px;
       }
-      p{
+      p {
         font-size: 14px;
         line-height: 20px;
+        font-weight: 300;
       }
+    }
   }
-  }
-  &__mask{
+  &__mask {
     position: absolute;
     top: 0;
     left: -10px;
     z-index: 0;
-    span{
+    span {
       color: $white;
       opacity: 0.03;
       font: 800 normal 175px/120px $font;
       letter-spacing: -6.15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         font-size: 323px;
         line-height: 244px;
       }
     }
   }
 }
-.bg__content {
-  background-image: url(../images/bg_home.png);
-  background-repeat: no-repeat;
-  background-position: 0px 2140px;
-  background-size: 100vw 1000px;
-  z-index: -1;
-  @include breakpoint(sm){
-    background-size: 100vw 1240px;
+
+.cases {
+  &__title {
+    font: 800 normal 42px/52px $font;
+    text-align: center;
+    margin-bottom: 60px;
   }
-  
+  &__image{
+    padding: 20px;
+    overscroll-behavior-x: contain;
+    direction: ltr;
+    overflow-x: auto;
+    max-width: 910px;
+    margin-bottom: 130px;
+    &:last-child {
+      max-width: 100%;
+    }
+    @include breakpoint(sm) {
+      overflow-x: unset;
+    }
+    img{
+      min-width: 870px;
+    }
+    }
+  .list-item {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 960px;
+    h3 {
+      font: 800 normal 16px/32px $font;
+      text-transform: uppercase;
+      color: $grey-md;
+    }
+    p {
+      font: 300 normal 17px/27px $font;
+      color: $grey-md;
+      margin-bottom: 60px;
+    }
+  }
 }
 
+.loan-cycle {
+  &__title {
+    @extend .flex, .flex-column, .justify-center, .align-center;
+    margin-bottom: 80px;
+    h2 {
+      font: 800 normal 42px/52px $font;
+      margin-bottom: 20px;
+    }
+    p {
+      text-align: center;
+      color: $grey-md;
+      width: 100%;
+      max-width: 850px;
+    }
+  }
+  &__content {
+    overscroll-behavior-x: contain;
+    direction: ltr;
+    overflow-x: auto;
+    max-width: 1024px;
+    margin-bottom: 130px;
+    margin: 0 auto;
+    @include breakpoint(sm) {
+      overflow-x: unset;
+    }
+    img{
+      min-width: 870px;
+    }
+  }
+}

@@ -12,6 +12,17 @@
   }
 }
 
+.bg__content {
+  background-image: url(../images/bg_home.png);
+  background-repeat: no-repeat;
+  background-position: 0px 2140px;
+  background-size: 100vw 1000px;
+  z-index: -1;
+  @include breakpoint(sm){
+    background-size: 100vw 1240px;
+  }
+  
+}
 
 .white__space{
   height: 160px;
