@@ -13,7 +13,7 @@ const slick = () => {
         },
       },
     ]
-  });
+  })
   $('.partners__carousel').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -30,7 +30,7 @@ const slick = () => {
         }
       }
     ]
-  });
+  })
 }
 
-export default slick;
+export default slick

@@ -17,4 +17,4 @@ const tabSlide = () => {
   }
 }
 
-export default tabSlide;
+export default tabSlide
