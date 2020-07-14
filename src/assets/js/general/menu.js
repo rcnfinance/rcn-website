@@ -21,22 +21,6 @@ const menu = () => {
       menuResponsive.classList.remove('--open');
     }
   });
-
-  const menu = document.getElementById('menu-sticky');
-  const logo = document.getElementById('logo');
-  let lastPosition = 0;
-  window.addEventListener('scroll', function (e) {
-    lastPosition = window.scrollY;
-    if (lastPosition >= 100) {
-      menu.classList.add('--active');
-      open.classList.add('--revert');
-      logo.classList.add('logo--revert');
-    } else {
-      menu.classList.remove('--active');
-      open.classList.remove('--revert');
-      logo.classList.remove('logo--revert');
-    }
-  });
 };
 
 export default menu

@@ -2,7 +2,7 @@ const tabSlide = () => {
   const btn = document.querySelectorAll('.partners__carousel .item');
   const tabCont = document.querySelectorAll('.partners__data .item');
   for (const el of btn) {
-    el.addEventListener('click', (e) => {
+    el.addEventListener('mouseover', (e) => {
       const slideItem = e.target.dataset.index;
       if (slideItem) {
         for (const tag of tabCont) {
@@ -14,6 +14,14 @@ const tabSlide = () => {
         }
       }
     });
+
+    el.addEventListener('mouseout', (e) => {
+      for (const tag of tabCont) {
+        tag.classList.remove('active');
+        console.log("Mouseover out")
+      }
+    });
+
   }
 }
 

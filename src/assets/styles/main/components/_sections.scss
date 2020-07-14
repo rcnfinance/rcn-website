@@ -120,7 +120,11 @@
       max-width: 490px;
       padding: 0px 25px;
       h3 {
-        font: 800 normal 70px/65px $font;
+        font: 800 normal 60px/65px $font;
+        @include breakpoint(md) {
+          font-size: 70px;
+          line-height: 57px;
+        }
         letter-spacing: -3.5px;
         color: $color-primary;
         margin-bottom: 20px;
@@ -287,6 +291,7 @@
     margin-top: 40px;
     width: 100%;
     text-align: center;
+    position: absolute;
     .item {
       display: none;
       .title {

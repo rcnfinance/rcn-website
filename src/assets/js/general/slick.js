@@ -2,8 +2,7 @@ const slick = () => {
   $('.news__carousel').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: false,
     variableWidth: true,
     responsive: [
       {
@@ -18,7 +17,6 @@ const slick = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 2000,
     variableWidth: true,
     responsive: [
       {
