@@ -8,14 +8,18 @@
       padding: 20px 0px;
   }
   &__item {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    @extend .flex, .flex-column, .justify-center, .align-center;
     @include breakpoint(sm) {
       margin-bottom: 0px;
+      flex-direction: row;
   }
     .--link {
       color: $white;
-      padding: 0px 20px;
+      margin-bottom: 5px;
       @include breakpoint(sm) {
+        padding: 0px 20px;
+        margin-bottom: 0px;
         border-right: 1px solid $white;
     }
     }
@@ -28,15 +32,20 @@
     }
     .--icon {
       width: 18px;
-      margin-left: 20px;
+      margin: 0px 5px;
+      @include breakpoint(sm){
+        margin-left: 30px;
+      }
       i {
         color: $white;
       }
     }
   }
   &__copy {
-    margin-left: 30px;
     color: $white;
+    @include breakpoint(sm){
+      margin-left: 30px;
+    }
   }
 }
 

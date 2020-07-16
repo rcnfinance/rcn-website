@@ -150,7 +150,7 @@
     span {
       color: $color-primary;
       opacity: 0.08;
-      font: 800 normal 144px/108px $font;
+      font: 800 normal 130px/108px $font;
       letter-spacing: -16.15px;
       @include breakpoint(sm) {
         font-size: 323px;
@@ -179,6 +179,10 @@
       width: 100%;
       max-width: 840px;
       margin: auto;
+      padding: 0px 25px;
+      @include breakpoint(sm) {
+        padding: 0px;
+      }
     }
   }
   &__carousel {
@@ -224,15 +228,17 @@
         margin-bottom: 10px;
       }
     }
-    @include breakpoint(sm) {
-      margin-left: 180px;
-    }
   }
   .slick-slide {
     padding-bottom: 60px;
     margin-right: 20px;
     &:first-child {
-      margin-left: 30px;
+      margin-left: 0px;
+      padding-left: 0px;
+      @include breakpoint(sm) {
+        padding-left: 180px;
+        margin-left: 30px;
+      }
     }
   }
 }

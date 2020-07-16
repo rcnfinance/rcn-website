@@ -78,7 +78,7 @@
     z-index: 1;
     left: 30px;
     @include breakpoint(sm){
-      left: 0px;
+      left: 180px;
     }
     &:focus{
       outline: 0;

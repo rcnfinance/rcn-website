@@ -18,10 +18,9 @@ const tabSlide = () => {
     el.addEventListener('mouseout', (e) => {
       for (const tag of tabCont) {
         tag.classList.remove('active');
-        console.log("Mouseover out")
+        console.log('Mouseover out')
       }
     });
-
   }
 }
 

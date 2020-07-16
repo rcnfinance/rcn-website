@@ -3,6 +3,7 @@ const slick = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
+    infinite: false,
     variableWidth: true,
     responsive: [
       {
@@ -18,6 +19,7 @@ const slick = () => {
     slidesToScroll: 1,
     autoplay: false,
     variableWidth: true,
+    infinite: true,
     responsive: [
       {
         breakpoint: 768,
