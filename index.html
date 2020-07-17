@@ -31,7 +31,18 @@
             <hr>
         </div>
     </section>
-    <section class="hero">
+    <div class="scrollspy">
+        <div class="scrollspy__title" id="name-section"></div>
+        <ul class="scrollspy__nav">
+            <li class="scrollspy__nav-item"><a class="--active" href="#section-0"> </a></li>
+            <li class="scrollspy__nav-item"><a class="--active" href="#section-1">|</a></li>
+            <li class="scrollspy__nav-item"><a href="#section-2">|</a></li>
+            <li class="scrollspy__nav-item"><a href="#section-3">|</a></li>
+            <li class="scrollspy__nav-item"><a href="#section-4">|</a></li>
+            <li class="scrollspy__nav-item"><a href="#section-5">|</a></li>
+        </ul>
+    </div>
+    <section class="hero ancla" id="section-0" data-name="Welcome to...">
         <div class="container">
             <div class="hero__content">
                 <div class="row">
@@ -47,7 +58,7 @@
         <div class="scroll-down"><span class="scroll-down--item"></span><span class="scroll-down--item"></span><span class="scroll-down--item"><img src="assets/images/arrow-right-blue.svg" alt=""></span></div>
     </section>
     <div class="white__space"></div>
-    <section class="network">
+    <section class="network ancla" id="section-1" data-name="The Network">
         <div class="container">
             <div class="wrapper">
                 <div class="network__content">
@@ -75,7 +86,7 @@
         </div>
     </section>
     <div class="white__space"></div>
-    <section class="features">
+    <section class="features ancla" id="section-3" data-name="Characteristics">
         <div class="container">
             <div class="features__content">
                 <div class="feature__content--title">
@@ -84,7 +95,8 @@
                 <p class="lead">Blockchain technology allows RCN to outperform existing lending solutions to create a frictionless, transparent and completely borderless alternative to traditional debt markets.</p>
             </div>
             <div class="features__list">
-                <div class="card-list"><a class="card" href="">
+                <div class="card-list">
+                    <div class="card">
                         <div class="card__icon"><img src="assets/images/home-frictionless.svg" alt="" srcset=""></div>
                         <div>
                             <div class="card__title">
@@ -95,7 +107,8 @@
                                 <p>The network allows creditors to make loans in a variety of lending and borrowing currencies.</p>
                             </div>
                         </div>
-                    </a><a class="card" href="">
+                    </div>
+                    <div class="card">
                         <div class="card__icon"><img src="assets/images/home-transparent.svg" alt="" srcset=""></div>
                         <div>
                             <div class="card__title">
@@ -106,7 +119,8 @@
                                 <p>The network allows creditors to make loans in a variety of lending and borrowing currencies.</p>
                             </div>
                         </div>
-                    </a><a class="card" href="">
+                    </div>
+                    <div class="card">
                         <div class="card__icon"><img src="assets/images/home-borderless.svg" alt="" srcset=""></div>
                         <div>
                             <div class="card__title">
@@ -117,12 +131,13 @@
                                 <p>The network allows creditors to make loans in a variety of lending and borrowing currencies.</p>
                             </div>
                         </div>
-                    </a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <div class="white__space"></div>
-    <section class="marketplace">
+    <section class="marketplace ancla" id="section-4" data-name="Marketplace">
         <div class="marketplace__mask"><span>Global leading</span></div>
         <div class="marketplace__content">
             <div class="marketplace__content--left"><img src="assets/images/tablet.png" alt=""></div>
@@ -133,11 +148,11 @@
         </div>
     </section>
     <div class="white__space"></div>
-    <section class="partners">
+    <section class="partners ancla" id="section-4" data-name="Partners">
         <div class="container">
             <div class="partners__title">
-                <h3 class="title-md">The Network</h3>
-                <p class="lead">As one of the Decentralized Finance ecosystem’s top companies, RCN is regularly present at key events and media outlets across the world.</p>
+                <h3 class="title-md">Partners</h3>
+                <p class="lead">By establishing relationships with Decentralized Finance ecosystem’s top companies RCN is able to deliver the highest performance across its network.</p>
             </div>
             <div class="partners__carousel">
                 <div class="item">
@@ -147,6 +162,10 @@
                             <h3>Ripio 1</h3>
                         </div>
                     </div>
+                    <div class="data">
+                        <h3 class="title">Funds Management 1</h3>
+                        <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
+                    </div>
                 </div>
                 <div class="item">
                     <div class="card" data-index="2">
@@ -154,6 +173,10 @@
                         <div class="card__title">
                             <h3>Ripio 2</h3>
                         </div>
+                    </div>
+                    <div class="data">
+                        <h3 class="title">Funds Management 1</h3>
+                        <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
                     </div>
                 </div>
                 <div class="item">
@@ -189,36 +212,10 @@
                     </div>
                 </div>
             </div>
-            <div class="partners__data">
-                <div class="item active" data-index="1">
-                    <h3 class="title">Funds Management 1</h3>
-                    <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
-                </div>
-                <div class="item" data-index="2">
-                    <h3 class="title">Funds Management 2</h3>
-                    <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
-                </div>
-                <div class="item" data-index="3">
-                    <h3 class="title">Funds Management 3</h3>
-                    <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
-                </div>
-                <div class="item" data-index="4">
-                    <h3 class="title">Funds Management 4</h3>
-                    <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
-                </div>
-                <div class="item" data-index="5">
-                    <h3 class="title">Funds Management 5</h3>
-                    <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
-                </div>
-                <div class="item" data-index="6">
-                    <h3 class="title">Funds Management 6</h3>
-                    <p class="lead">Metamask is an industry-wide recognized cryptocurrency web wallet, which acts as a bridge between Internet browsers and the Ethereum network. Its simple interface allows RCN lenders to connect with the platform and safely store or move their funds through the blockchain.</p>
-                </div>
-            </div>
         </div>
     </section>
     <div class="white__space"></div>
-    <section class="news">
+    <section class="news ancla" id="section-5" data-name="News &amp; Events">
         <div class="news__title">
             <h3 class="title-md">The Network</h3>
             <p class="lead">As one of the Decentralized Finance ecosystem’s top companies, RCN is regularly present at key events and media outlets across the world.</p>
