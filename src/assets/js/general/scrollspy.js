@@ -1,28 +1,28 @@
 const scrollspy = () => {
   document.addEventListener(
-    "DOMContentLoaded",
+    'DOMContentLoaded',
     () => {
-      const sections = document.querySelectorAll(".ancla");
-      const menuLinks = document.querySelectorAll(".scrollspy__nav-item a");
-      const makeActive = (link) => menuLinks[link].classList.add("--active");
-      const node = document.createElement("span");
-      const nameSection = document.getElementById("name-section");
+      const sections = document.querySelectorAll('.ancla');
+      const menuLinks = document.querySelectorAll('.scrollspy__nav-item a');
+      const makeActive = (link) => menuLinks[link].classList.add('--active');
+      const node = document.createElement('span');
+      const nameSection = document.getElementById('name-section');
 
       const removeActive = (link) =>
-        menuLinks[link].classList.remove("--active");
+        menuLinks[link].classList.remove('--active');
       const removeAllActive = () =>
         [...Array(sections.length).keys()].forEach((link) =>
           removeActive(link)
         );
       const sectionMargin = 400;
       let currentActive = 0;
-      window.addEventListener("scroll", (e) => {
+      window.addEventListener('scroll', (e) => {
         const current =
           sections.length -
           [...sections].reverse().findIndex((section) => {
-            let actualPos = window.scrollY >= section.offsetTop - sectionMargin;
+            const actualPos = window.scrollY >= section.offsetTop - sectionMargin;
             if (actualPos) {
-              let attr = section.getAttribute("data-name");
+              const attr = section.getAttribute('data-name');
               console.log(attr);
               node.innerHTML = `${attr}`;
               nameSection.appendChild(node);

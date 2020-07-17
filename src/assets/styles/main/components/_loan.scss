@@ -19,6 +19,7 @@
           cursor: pointer;
           color: $grey;
           right: 20px;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
           @include breakpoint(sm) {
             display: none;
           }

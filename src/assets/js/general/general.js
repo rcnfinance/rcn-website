@@ -3,6 +3,7 @@ import tab from './tab'
 import slick from './slick'
 import scrollspy from './scrollspy'
 import tabSlide from './tab-slide'
+import acc from './acc'
 
 const general = () => {
   menu()
@@ -10,6 +11,7 @@ const general = () => {
   tabSlide()
   scrollspy()
   slick()
+  acc()
 }
 
 export default general
