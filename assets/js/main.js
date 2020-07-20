@@ -199,7 +199,7 @@ function _toConsumableArray(arr){return _arrayWithoutHoles(arr)||_iterableToArra
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var slick=function slick(){$('.news__carousel').slick({slidesToShow:4,slidesToScroll:1,autoplay:false,infinite:false,variableWidth:true,responsive:[{breakpoint:768,settings:{centerMode:true}}]});$('.partners__carousel').slick({slidesToShow:5,slidesToScroll:1,autoplay:false,variableWidth:true,infinite:true,responsive:[{breakpoint:768,settings:{centerMode:true,arrows:false,autoplay:true}}]});};/* harmony default export */ __webpack_exports__["default"] = (slick);
+var slick=function slick(){$('.news__carousel').slick({slidesToShow:4,slidesToScroll:1,autoplay:false,infinite:false,variableWidth:true,responsive:[{breakpoint:768,settings:{centerMode:true}}]});$('.partners__carousel').slick({slidesToShow:5,slidesToScroll:1,autoplay:false,variableWidth:true,infinite:true,responsive:[{breakpoint:768,settings:{centerMode:true,arrows:false,autoplay:false}}]});};/* harmony default export */ __webpack_exports__["default"] = (slick);
 
 /***/ }),
 

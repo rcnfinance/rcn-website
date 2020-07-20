@@ -786,7 +786,7 @@ textarea {
     .lead {
       font: 300 normal 20px/27px "proxima-nova", sans-serif; } }
 
-.flex, .hero__content--right, .menu, .menu .logo, .menu--dropdown, .menu--dropdown .menu__item--links, .menu--dropdown .menu__item--links a, .menu--dropdown .menu__item--contact, .scroll-down, .about .row, .card-list, .card-list .card, .loan .row, .loan__list, .loan__list .item, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .network__tab, .network__tab--nav, .features__content, .marketplace__content, .news__carousel .card__adress .date, .partners, .partners .card, .properties .row, .get-started, .get-started__list, .loan-cycle__title {
+.flex, .hero__content--right, .menu, .menu .logo, .menu--dropdown, .menu--dropdown .menu__item--links, .menu--dropdown .menu__item--links a, .menu--dropdown .menu__item--contact, .scroll-down, .about .row, .card-list, .card-list .card, .loan .row, .loan__list, .loan__list .item, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .network__tab, .network__tab--nav, .features__content, .marketplace__content, .news__carousel .card__adress .date, .partners, .partners .card, .partners .card__info, .properties .row, .get-started, .get-started__list, .loan-cycle__title {
   display: flex; }
 
 .inline-flex {
@@ -806,7 +806,7 @@ textarea {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse; }
 
-.justify-center, .scroll-down, .about .row, .card-list .card, .loan .row, .loan__list, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .network__tab, .network__tab--nav, .features__content, .partners, .partners .card, .properties .row, .get-started, .loan-cycle__title {
+.justify-center, .scroll-down, .about .row, .card-list .card, .loan .row, .loan__list, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .network__tab, .network__tab--nav, .features__content, .partners, .partners .card, .partners .card__info, .properties .row, .get-started, .loan-cycle__title {
   justify-content: center; }
 
 .justify-start, .loan__list .item, .marketplace__content {
@@ -824,7 +824,7 @@ textarea {
 .align-baseline {
   align-items: baseline; }
 
-.align-center, .hero__content--right, .menu, .menu .logo, .menu--dropdown .menu__item--links a, .menu--dropdown .menu__item--contact, .scroll-down, .about .row, .card-list .card, .loan .row, .loan__list, .loan__list .item, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .features__content, .news__carousel .card__adress .date, .partners, .partners .card, .properties .row, .get-started, .get-started__list, .loan-cycle__title {
+.align-center, .hero__content--right, .menu, .menu .logo, .menu--dropdown .menu__item--links a, .menu--dropdown .menu__item--contact, .scroll-down, .about .row, .card-list .card, .loan .row, .loan__list, .loan__list .item, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .features__content, .news__carousel .card__adress .date, .partners, .partners .card, .partners .card__info, .properties .row, .get-started, .get-started__list, .loan-cycle__title {
   align-items: center; }
 
 .align-end {
@@ -940,7 +940,7 @@ textarea {
 .dib {
   display: inline-block; }
 
-.flex, .hero__content--right, .menu, .menu .logo, .menu--dropdown, .menu--dropdown .menu__item--links, .menu--dropdown .menu__item--links a, .menu--dropdown .menu__item--contact, .scroll-down, .about .row, .card-list, .card-list .card, .loan .row, .loan__list, .loan__list .item, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .network__tab, .network__tab--nav, .features__content, .marketplace__content, .news__carousel .card__adress .date, .partners, .partners .card, .properties .row, .get-started, .get-started__list, .loan-cycle__title {
+.flex, .hero__content--right, .menu, .menu .logo, .menu--dropdown, .menu--dropdown .menu__item--links, .menu--dropdown .menu__item--links a, .menu--dropdown .menu__item--contact, .scroll-down, .about .row, .card-list, .card-list .card, .loan .row, .loan__list, .loan__list .item, .loan__list .item--icon, .footer, .footer__item, .footer__socials, .network__tab, .network__tab--nav, .features__content, .marketplace__content, .news__carousel .card__adress .date, .partners, .partners .card, .partners .card__info, .properties .row, .get-started, .get-started__list, .loan-cycle__title {
   display: flex; }
 
 .dt {
@@ -1754,32 +1754,48 @@ textarea {
     max-width: 180px;
     min-width: 180px;
     height: 180px; }
-    .partners .card__icon {
-      width: 70px;
-      margin-bottom: 30px; }
-  .partners__carousel {
-    position: relative; }
-    .partners__carousel .item {
-      position: relative; }
-      .partners__carousel .item:hover > .data {
-        display: block !important; }
-    .partners__carousel .data {
+    .partners .card:hover > .card__info {
+      display: none; }
+      @media (min-width: 48em) {
+        .partners .card:hover > .card__info {
+          display: block; } }
+    .partners .card__info {
       position: absolute;
       display: none;
-      z-index: 9999999;
-      border: 1px solid red;
-      text-align: center; }
-      .partners__carousel .data .title {
+      width: 420px !important;
+      top: 220px;
+      left: 0px;
+      text-align: left; }
+      @media (min-width: 48em) {
+        .partners .card__info {
+          width: 100%; } }
+      .partners .card__info .title {
         text-transform: uppercase;
         font-size: 12px;
         line-height: 15px;
         letter-spacing: 1.2px;
         color: #454545;
         margin-bottom: 10px; }
-      .partners__carousel .data .lead {
+      .partners .card__info .lead {
         color: #454545;
         font-size: 15px;
         line-height: 25px; }
+      .partners .card__info .active {
+        display: block; }
+    .partners .card__icon {
+      width: 70px;
+      margin-bottom: 30px; }
+  .partners__carousel {
+    position: relative;
+    margin-bottom: 100px; }
+    .partners__carousel .item {
+      position: relative;
+      display: none;
+      width: 100%;
+      cursor: pointer; }
+      @media (min-width: 48em) {
+        .partners__carousel .item {
+          height: 360px; } }
     .partners__carousel .card__title {
       color: #4155FF; }
     .partners__carousel:before {
@@ -1806,7 +1822,7 @@ textarea {
     box-shadow: 0px 3px 15px #D1D1D1;
     width: 70px;
     height: 70px;
-    top: 35%;
+    top: 18%;
     right: 5px;
     z-index: 1; }
     .partners .slick-next:focus {
