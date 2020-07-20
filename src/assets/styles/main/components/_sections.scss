@@ -265,25 +265,23 @@
     max-width: 180px;
     min-width: 180px;
     height: 180px;
-    &__icon {
-      width: 70px;
-      margin-bottom: 30px;
-    }
-  }
-  &__carousel {
-    position: relative;
-    .item{
-      position: relative;
-      &:hover > .data {
-        display: block !important;
+    &:hover > .card__info{
+      display: none;
+      @include breakpoint(sm) {
+        display: block;
       }
     }
-    .data {
+    &__info {
       position: absolute;
       display: none;
-      z-index: 9999999;
-      border: 1px solid red;
-      text-align: center;
+      width: 420px !important;
+      top: 220px;
+      left: 0px;
+      text-align: left;
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+      @extend .flex, .align-center, .justify-center;
       .title {
         text-transform: uppercase;
         font-size: 12px;
@@ -296,6 +294,26 @@
         color: $grey;
         font-size: 15px;
         line-height: 25px;
+      }
+      .active{
+        display: block;
+      }
+    }
+    &__icon {
+      width: 70px;
+      margin-bottom: 30px;
+    }
+  }
+  &__carousel {
+    position: relative;
+    margin-bottom: 100px;
+    .item{
+      position: relative;
+      display: none;
+      width: 100%;
+      cursor: pointer;
+      @include breakpoint(sm) {
+        height: 360px;
       }
     }
     .card__title {
@@ -327,7 +345,7 @@
     box-shadow: 0px 3px 15px $ligth-grey;
     width: 70px;
     height: 70px;
-    top: 35%;
+    top: 18%;
     right: 5px;
     z-index: 1;
     &:focus {

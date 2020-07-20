@@ -26,7 +26,7 @@ const slick = () => {
         settings: {
           centerMode: true,
           arrows: false,
-          autoplay: true,
+          autoplay: false,
         }
       }
     ]
