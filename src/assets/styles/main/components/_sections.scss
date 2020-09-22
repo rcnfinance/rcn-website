@@ -223,8 +223,15 @@
         }
       }
       &__icon {
-        max-width: 115px;
+        width: 115px;
+        height: 115px;
         margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
       &__lead {
         font: 300 normal 15px/18px $font;
@@ -288,11 +295,14 @@
       @extend .flex, .align-center, .justify-center;
       .title {
         text-transform: uppercase;
-        font-size: 12px;
         line-height: 15px;
         letter-spacing: 1.2px;
-        color: $grey;
+        color: $grey-dk;
         margin-bottom: 10px;
+        font-family: $font;
+        font-weight: 600;
+        font-size: 12px;
+        opacity: .6;
       }
       .lead {
         color: $grey;
@@ -322,6 +332,7 @@
     }
     .card__title {
       color: $color-primary;
+      font-family: $font;
     }
     &:before {
       content: "";
@@ -380,6 +391,9 @@
     width: 100%;
     max-width: 840px;
     margin-bottom: 60px;
+    &--title {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -473,7 +487,7 @@
     text-align: center;
     margin-bottom: 60px;
   }
-  &__image{
+  &__image {
     padding: 20px;
     overscroll-behavior-x: contain;
     direction: ltr;
@@ -486,10 +500,10 @@
     @include breakpoint(sm) {
       overflow-x: unset;
     }
-    img{
+    img {
       min-width: 870px;
     }
-    }
+  }
   .list-item {
     margin-bottom: 30px;
     width: 100%;
@@ -532,7 +546,7 @@
     @include breakpoint(sm) {
       overflow-x: unset;
     }
-    img{
+    img {
       min-width: 870px;
     }
   }
