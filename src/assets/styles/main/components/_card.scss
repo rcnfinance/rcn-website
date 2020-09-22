@@ -4,7 +4,7 @@
   overscroll-behavior-x: contain;
   direction: ltr;
   overflow-x: auto;
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     padding: 20px 80px;
     margin-left: -19px;
   }
@@ -19,10 +19,10 @@
     @extend .flex, .justify-center, .align-center;
     transition: all 1.2s;
     margin-right: 30px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-right: 88px;
     }
-    &:last-child{
+    &:last-child {
       margin-right: 0px;
     }
     &:hover {

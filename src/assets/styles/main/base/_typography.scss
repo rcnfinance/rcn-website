@@ -49,9 +49,9 @@ textarea {
 .title-md {
   font: 800 normal 42px/52px $font;
   letter-spacing: -2.25px;
-  margin-bottom: 20px;
   @include breakpoint(sm) {
     font: 800 normal 45px/54px;
+    margin-bottom: 20px;
   }
 }
 .title-lg {
