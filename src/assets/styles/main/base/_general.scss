@@ -15,8 +15,12 @@
     &.is-block {
       overflow: hidden;
     }
-  }
+  } 
 
+  a {
+    text-decoration: none;
+  }
   img {
     max-width: 100%;
+    width: 100%;
   }

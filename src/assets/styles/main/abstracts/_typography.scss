@@ -1,6 +1,14 @@
 $system-fonts: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-$font: 'Poppins', sans-serif;
+@import url("https://use.typekit.net/vrp4lvb.css");
+
+$font: 'proxima-nova', sans-serif;
+
+
+body{
+    font-family: $font;
+}
 
 // Typography Weight
 $f-regular: 400;
 $f-bold: 700;
+$f-ebold: 900;

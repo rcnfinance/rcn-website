@@ -3,11 +3,34 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: rem(1140);
+  max-width: 1480px;
   margin: 0 auto;
   padding: 0 rem(10);
-
   @include breakpoint(sm) {
-    padding: 0 rem(20);
+    padding: 0 20px;
+  }
+}
+
+.bg__content {
+  background-image: url(../images/bg_home.png);
+  background-repeat: no-repeat;
+  background-position: 0px 2140px;
+  background-size: 100vw 1000px;
+  z-index: -1;
+  @include breakpoint(sm) {
+    background-size: 100vw 1240px;
+  }
+}
+
+.white__space{
+  height: 160px;
+  @include breakpoint(sm) {
+    height: 300px;
+  }
+  &--module{
+    height: 100px;
+    @include breakpoint(sm) {
+      height: 50px;
+    }
   }
 }

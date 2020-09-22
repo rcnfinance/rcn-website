@@ -1,6 +1,17 @@
 extends layouts/layout-primary
 
+block vars
+  - bodyClasses.push('bg__content')
+
 block content
-  section.home
-    h1 Home
-    p RCN-website
+  include layouts/components/scrollspy.pug
+  include layouts/general/hero
+  include layouts/components/white_space
+  include layouts/section_network
+  include layouts/components/white_space
+  include layouts/section_characteristics
+  include layouts/components/white_space
+  include layouts/section_marketplace
+  include layouts/components/white_space
+  include layouts/section_partners
+  include layouts/section_news

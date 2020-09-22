@@ -18,11 +18,15 @@ html(lang='en')
       link(rel='stylesheet', href='assets/css/vendor.css')
       link(rel='stylesheet', href='assets/css/main.css')
     block head
-      //- If extra head content is necessary per page, it can be added per screen
+      link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous')
 
-  body
+
+  - var bodyClasses = [];
+  block vars
+  body(class=bodyClasses)
     include includes/mixins
     include general/menu
+    include general/menu_responsive
     block content
       //- This gets replaced by content per page
 
@@ -31,6 +35,9 @@ html(lang='en')
       //- If extra footer content is necessary per page, it can be added per screen
 
     if production
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
     script(src='assets/js/main.js')
     block scripts
-      //- Also if more scripts are needed you can hook in here <3
+
+      

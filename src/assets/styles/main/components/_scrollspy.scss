@@ -1,0 +1,35 @@
+.scrollspy {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  list-style-type: none;
+  z-index: 99999;
+  width: 35px;
+  text-align: right;
+  display: none;
+  @include breakpoint(sm) {
+    display: block;
+  }
+  &__title {
+    font-size: 15px;
+    color: #707070;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    span {
+      writing-mode: vertical-rl;
+    }
+  }
+  &__nav-item {
+    margin-bottom: 3px;
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: $ligth-grey;
+      transition: all 0.8s;
+    }
+  }
+  .--active {
+    color: $color-primary;
+  }
+}

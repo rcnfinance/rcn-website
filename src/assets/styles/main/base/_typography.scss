@@ -40,3 +40,35 @@ textarea {
   opacity: 0.5;
   font-size: rem(16);
 }
+
+// Typography sizes
+
+.title-sm {
+  font: 800 normal 16px/20px $font;
+}
+.title-md {
+  font: 800 normal 42px/52px $font;
+  letter-spacing: -2.25px;
+  @include breakpoint(sm) {
+    font: 800 normal 45px/54px;
+    margin-bottom: 20px;
+  }
+}
+.title-lg {
+  font: 800 normal 70px/85px $font;
+  @include breakpoint(sm) {
+    font-size: 125px;
+    line-height: 100px;
+  }
+}
+
+.title-xl {
+  font: 800 normal 16px/20px $font;
+}
+
+.lead {
+  font: 300 normal 17px/24px $font;
+  @include breakpoint(sm) {
+    font: 300 normal 20px/27px $font;
+  }
+}
