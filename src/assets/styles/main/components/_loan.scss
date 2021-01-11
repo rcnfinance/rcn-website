@@ -3,7 +3,7 @@
     @extend .flex, .justify-center, .align-center;
   }
   &__list {
-    @extend .flex, .justify-center, .align-center, .flex-wrap;
+    @extend .flex, .justify-start, .align-center, .flex-wrap;
     width: 100%;
     max-width: 858px;
     margin-left: auto;

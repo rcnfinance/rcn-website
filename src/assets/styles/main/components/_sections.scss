@@ -461,6 +461,10 @@
         line-height: 20px;
         font-weight: 300;
       }
+      a {
+        color: inherit;
+        font-weight: 600;
+      }
     }
   }
   &__mask {
@@ -494,9 +498,6 @@
     overflow-x: auto;
     max-width: 910px;
     margin-bottom: 130px;
-    &:last-child {
-      max-width: 100%;
-    }
     @include breakpoint(sm) {
       overflow-x: unset;
     }
@@ -541,7 +542,6 @@
     direction: ltr;
     overflow-x: auto;
     max-width: 1024px;
-    margin-bottom: 130px;
     margin: 0 auto;
     @include breakpoint(sm) {
       overflow-x: unset;

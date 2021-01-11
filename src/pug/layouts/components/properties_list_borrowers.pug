@@ -17,23 +17,23 @@ section.loan
                     .item--nav
                         i.fas.fa-chevron-down
                     .more
-                        h3 LEND AMOUNT
-                        p The Lend Amount is the amount the lender has to deposit in order to fund the loan, denominated in the Borrowing Currency. This amount can also be seen expressed in the chosen Lending Currency on the Loan Lending dialog.
+                        h3 BORROW AMOUNT
+                        p The Borrow Amount is the amount the borrower is requesting from a lender, denominated in the Borrowing Currency.
                     .item--icon
                         i.fas.fa-user
                     .item--text
-                        h3 LEND AMOUNT
+                        h3 BORROW AMOUNT
                         p.lead 10,000 USDC
                 .item
                     .item--nav
                         i.fas.fa-chevron-down
                     .more
-                        h3 RECEIVE AMOUNT
-                        p The Receive Amount is the amount of capital plus interest the lender will receive for funding the loan, denominated in the Borrowing Currency. A possible value for this amount can also be seen expressed in the chosen Lending Currency on the Loan Lending dialog.
+                        h3 REPAY AMOUNT
+                        p The Repay Amount is the amount of capital plus interest the borrower has to pay back to fully repay a loan, denominated in the Borrowing Currency.
                     .item--icon
                         i.fas.fa-user-circle
                     .item--text
-                        h3 RECEIVE AMOUNT
+                        h3 REPAY AMOUNT
                         p.lead 10,250 USDC
                 .item
                     .item--nav
@@ -42,7 +42,7 @@ section.loan
                         h3 ANNUAL RATE
                         p The Annual Rate is the annualized interest rate paid by the borrower and earned by the lender for funding the loan (without taking compound interest into account).
                     .item--icon
-                        i.fas.fa-long-arrow-alt-up
+                        i.fas.fa-user-circle
                     .item--text
                         h3 ANNUAL RATE
                         p.lead 10 %
@@ -50,21 +50,10 @@ section.loan
                     .item--nav
                         i.fas.fa-chevron-down
                     .more
-                        h3 PENALTY RATE
-                        p The Penalty Rate is the interest rate that replaces the Annual Rate in CeFi loans once the Due Date has passed and the loan’s status has changed to Overdue. This rate is applied to both the principal and the interest accrued until that moment.
-                    .item--icon
-                        i.fas.fa-calculator
-                    .item--text
-                        h3 PENALTY RATE
-                        p.lead 15%
-                .item
-                    .item--nav
-                        i.fas.fa-chevron-down
-                    .more
                         h3 DURATION
-                        p The Duration indicates the amount of time the borrower has in order to repay the loan before its status changes to Overdue, and the Penalty Rate replaces the Annual Rate.
+                        p The Duration indicates the amount of time the borrower has in order to repay the loan, before its collateral gets partially or totally liquidated.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 DURATION
                         p.lead 90 Days
@@ -72,10 +61,21 @@ section.loan
                     .item--nav
                         i.fas.fa-chevron-down
                     .more
-                        h3 COLLATERAL AMOUNT
-                        p The Collateral Amount is the amount of funds currently collateralized in a DeFi loan.
+                        h3 EXPIRATION TIME
+                        p The Expiration Time indicates the amount of time the loan request will remain active before expiring, if it isn’t funded by a lender.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
+                    .item--text
+                        h3 EXPIRATION TIME
+                        p.lead 1 Day
+                .item
+                    .item--nav
+                        i.fas.fa-chevron-down
+                    .more
+                        h3 COLLATERAL AMOUNT
+                        p The Collateral Amount is the amount of funds that the borrower has locked to back the loan.
+                    .item--icon
+                        i.fas.fa-user-circle
                     .item--text
                         h3 COLLATERAL AMOUNT
                         p.lead 619424.4604 RCN
@@ -84,9 +84,9 @@ section.loan
                         i.fas.fa-chevron-down
                     .more
                         h3 COLLATERAL RATIO
-                        p The Collateral Ratio is the proportion between the value of the collateral and the value of the borrowed funds in a DeFi loan.
+                        p The Collateral Ratio is the proportion between the value of the collateral and the value of the borrowed funds.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 COLLATERAL RATIO
                         p.lead 252%
@@ -95,9 +95,9 @@ section.loan
                         i.fas.fa-chevron-down
                     .more
                         h3 LIQUIDATION EXCHANGE RATE
-                        p The Liquidation Exchange Rate is the exchange rate at which the Collateral Ratio will reach the Liquidation Ratio in a DeFi loan.
+                        p The Liquidation Exchange Rate is the exchange rate at which the Collateral Ratio will reach the Liquidation Ratio.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 LIQUIDATION EXCHANGE RATE
                         p.lead 0.0248 RCN/USDC
@@ -106,9 +106,9 @@ section.loan
                         i.fas.fa-chevron-down
                     .more
                         h3 LIQUIDATION RATIO
-                        p The Liquidation Ratio is the value of the Collateral Ratio at which the collateral will get partially or fully liquidated in a DeFi loan.
+                        p The Liquidation Ratio is the value of the Collateral Ratio at which the collateral will get partially or fully liquidated.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 LIQUIDATION RATIO
                         p.lead 150%
@@ -117,9 +117,9 @@ section.loan
                         i.fas.fa-chevron-down
                     .more
                         h3 SAFETY RATIO
-                        p The Safety Ratio is the value the Collateral Ratio will reach after a collateral liquidation in a DeFi loan.
+                        p The Safety Ratio is the value the Collateral Ratio will reach after a collateral liquidation.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 SAFETY RATIO
                         p.lead 200%
@@ -128,9 +128,9 @@ section.loan
                         i.fas.fa-chevron-down
                     .more
                         h3 CURRENT EXCHANGE RATE
-                        p The Current Exchange Rate is the current price ratio between the Collateralization Currency and the Borrowing Currency in a DeFi loan.
+                        p The Current Exchange Rate is the current price ratio between the Collateralization Currency and the Borrowing Currency. This variable can be verified but not defined by the borrower.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 CURRENT EXCHANGE RATE
                         p.lead 0.0417 RCN/USDC
@@ -139,9 +139,9 @@ section.loan
                         i.fas.fa-chevron-down
                     .more
                         h3 INSTALMENTS
-                        p The Instalments Schedule indicates the number, date and amount of the payments in which the Receive Amount will be repaid. Each of these payments represents another due date in the loan’s repayment schedule.
+                        p The Instalments indicate the number of evenly distributed and equal payments in which the Repay amount will be repaid. Each of these payments implies another due date in the loan’s repayment schedule.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 INSTALMENTS
                         p.lead 1 Payment
@@ -149,21 +149,10 @@ section.loan
                     .item--nav
                         i.fas.fa-chevron-down
                     .more
-                        h3 BORROWER
-                        p The borrower’s address is a unique identification of his or her Ethereum wallet.
-                    .item--icon
-                        i.fas.fa-user
-                    .item--text
-                        h3 BORROWER
-                        p.lead 0x2c...ef20
-                .item
-                    .item--nav
-                        i.fas.fa-chevron-down
-                    .more
                         h3 ORACLE
-                        p The Oracle, represented by its Ethereum address, supplies the exchange rate used to calculate the equivalence between amounts denominated in the Borrowing and Lending Currencies.
+                        p The Oracle, represented by its Ethereum address, supplies the exchange rate used to calculate the equivalence between amounts denominated in the Borrowing and Lending Currencies. This variable can be verified but not defined by the borrower.
                     .item--icon
-                        i.fas.fa-user
+                        i.fas.fa-user-circle
                     .item--text
                         h3 ORACLE
                         p.lead 0x03...a23E
