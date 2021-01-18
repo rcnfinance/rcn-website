@@ -195,7 +195,7 @@
       padding: 20px;
       max-width: 320px;
       min-width: 320px;
-      min-height: 350px;
+      min-height: 370px;
       &__title {
         font: 600 normal 20px/24px $font;
         color: $color-primary;
@@ -461,6 +461,10 @@
         line-height: 20px;
         font-weight: 300;
       }
+      a {
+        color: inherit;
+        font-weight: 600;
+      }
     }
   }
   &__mask {
@@ -494,10 +498,9 @@
     overflow-x: auto;
     max-width: 910px;
     margin-bottom: 130px;
-    &:last-child {
-      max-width: 100%;
-    }
     @include breakpoint(sm) {
+      margin-left: auto;
+      margin-right: auto;
       overflow-x: unset;
     }
     img {
@@ -517,6 +520,11 @@
       font: 300 normal 17px/27px $font;
       color: $grey-md;
       margin-bottom: 60px;
+    }
+    @include breakpoint(sm) {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
   }
 }
@@ -541,7 +549,6 @@
     direction: ltr;
     overflow-x: auto;
     max-width: 1024px;
-    margin-bottom: 130px;
     margin: 0 auto;
     @include breakpoint(sm) {
       overflow-x: unset;
