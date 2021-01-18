@@ -499,6 +499,8 @@
     max-width: 910px;
     margin-bottom: 130px;
     @include breakpoint(sm) {
+      margin-left: auto;
+      margin-right: auto;
       overflow-x: unset;
     }
     img {
@@ -518,6 +520,11 @@
       font: 300 normal 17px/27px $font;
       color: $grey-md;
       margin-bottom: 60px;
+    }
+    @include breakpoint(sm) {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
   }
 }
