@@ -1,8 +1,8 @@
 const acc = () => {
   const acc = document.getElementsByClassName('item--nav');
-  
+
   for (const el of acc) {
-    el.addEventListener('click', function() {
+    el.addEventListener('click', function () {
       this.classList.toggle('active');
       const more = this.nextElementSibling;
       if (more.style.display === 'block') {
