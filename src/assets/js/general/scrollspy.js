@@ -23,7 +23,6 @@ const scrollspy = () => {
             const actualPos = window.scrollY >= section.offsetTop - sectionMargin;
             if (actualPos) {
               const attr = section.getAttribute('data-name');
-              console.log(attr);
               node.innerHTML = `${attr}`;
               nameSection.appendChild(node);
               return actualPos;

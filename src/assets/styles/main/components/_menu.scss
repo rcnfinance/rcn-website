@@ -86,6 +86,8 @@
         @extend .flex, .align-center, .justify-between;
         h3 {
           font: 900 normal 45px/54px sans-serif;
+          font-family: 'proxima-nova';
+          letter-spacing: -2.25px;
           a {
             color: inherit;
           }
