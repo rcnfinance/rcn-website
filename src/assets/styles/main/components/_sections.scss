@@ -277,10 +277,7 @@
     min-width: 180px;
     height: 180px;
     &:hover > .card__info{
-      display: none;
-      @include breakpoint(sm) {
-        display: block;
-      }
+      display: block;
     }
     &__info {
       position: absolute;
@@ -320,56 +317,69 @@
   }
   &__carousel {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 16px;
+    @include breakpoint(sm) {
+      margin-bottom: 100px;
+    }
     .item{
       position: relative;
       display: none;
       width: 100%;
+      height: 360px;
       cursor: pointer;
-      @include breakpoint(sm) {
-        height: 360px;
-      }
     }
     .card__title {
       color: $color-primary;
       font-family: $font;
     }
-    &:before {
+    &:before,
+    &:after {
       content: "";
       position: absolute;
       background-color: $white;
-      box-shadow: -12px 0px 19px 0px rgba(255, 255, 255, 1);
       opacity: 0.8;
       width: 15%;
       height: 100%;
       top: 0;
-      right: 0;
       z-index: 1;
       display: none;
       @include breakpoint(sm) {
         display: block;
       }
     }
+    &:before {
+      right: 0;
+      box-shadow: -12px 0px 19px 0px rgba(255, 255, 255, 1);
+    }
+    &:after {
+      left: 0;
+      box-shadow: 12px 0px 19px 0px rgba(255, 255, 255, 1);
+    }
   }
-  .slick-next {
+  .slick-next,
+  .slick-prev {
     background-color: $white;
     border-radius: 50px;
-    background-image: url("../images/arrow-right-blue.svg");
     background-position: center;
     background-size: 20px 20px;
-    box-shadow: 0px 3px 15px $ligth-grey;
     width: 70px;
     height: 70px;
     top: 18%;
-    right: 5px;
-    z-index: 1;
+    z-index: 10;
     &:focus {
       outline: 0;
       opacity: 0.7;
     }
   }
+  .slick-next {
+    background-image: url("../images/arrow-right-blue.svg");
+    box-shadow: 0px 3px 15px $ligth-grey;
+    right: 5px;
+  }
   .slick-prev {
-    display: none !important;
+    background-image: url("../images/arrow-left-blue.svg");
+    box-shadow: 0px 3px 15px $ligth-grey;
+    left: 5px;
   }
   .slick-slide {
     padding: 20px 10px;
@@ -417,6 +427,7 @@
     z-index: 2;
     h3 {
       font: 800 normal 70px/85px $font;
+      letter-spacing: -3.5px;
     }
     .link {
       color: $white;
