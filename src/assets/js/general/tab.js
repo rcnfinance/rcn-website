@@ -3,6 +3,10 @@ const tabs = () => {
   const tabContent = document.querySelectorAll(
     '.network__tab--content .tabcontent'
   );
+  const defaultButtonActive = document.querySelectorAll('.tablinks#Ecosystem')
+
+  defaultButtonActive[0].style.color = 'black'
+  defaultButtonActive[1].style.background = '#404FFF'
 
   for (const el of btn) {
     el.addEventListener('click', (e) => {
@@ -20,7 +24,7 @@ const tabs = () => {
           selectBtn === tag.id ? tag.classList.add('--show') : tag.classList.remove('--show');
         }
         buttonSelected[0].style.color = 'black'
-        buttonSelected[1].style.background = 'black'
+        buttonSelected[1].style.background = '#404FFF'
       }
     })
   }
