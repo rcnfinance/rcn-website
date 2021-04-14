@@ -31,6 +31,21 @@
           display: none;
         }
       }
+      &--text {
+        h3 {
+          font: 300 normal 14px/16px $font;
+          text-transform: uppercase;
+          color: $grey;
+        }
+        a {
+          font: 600 normal 15px/23px $font;
+          color: $color-primary;
+        }
+        p.lead {
+          font: 700 normal 15px/23px $font;
+          color: #242424;
+        }
+      }
       .more {
         box-shadow: 0px 3px 15px #6e6e6e2b;
         border-radius: 7px;
@@ -55,21 +70,6 @@
       .--open {
         display: block !important;
       }
-      &--text {
-        h3 {
-          font: 300 normal 14px/16px $font;
-          text-transform: uppercase;
-          color: $grey;
-        }
-        a {
-          font: 600 normal 15px/23px $font;
-          color: $color-primary;
-        }
-        p.lead {
-          font: 700 normal 15px/23px $font;
-          color: #242424;
-        }
-      }
       &--icon {
         @extend .flex, .align-center, .justify-center;
         background: $color-primary;
@@ -80,14 +80,14 @@
         height: 40px;
         cursor: pointer;
         transition: all 1.2s;
+        i {
+          color: $white;
+        }
         &:hover {
           background: $white;
           i {
             color: $color-primary;
           }
-        }
-        i {
-          color: $white;
         }
       }
     }
